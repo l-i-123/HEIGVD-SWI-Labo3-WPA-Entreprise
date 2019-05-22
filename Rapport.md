@@ -61,11 +61,15 @@ On retrouve dans la trame Cient Hello le numéro de version du protocol TLS
 
 ![1558460603177](./Images/1558460603177.png)
 
-- Suites cryptographiques et méthodes de compression proposées par le client (trame Client Hello)
+- Sélection de la méthode d’authentification
+
+  ![1558526156219](./Images/1558526156219.png)
+
+- Liste des cipher proposées par le client (trame Client Hello)
 
 ![1558461045500](./Images/1558461045500.png)
 
-- Suites cryptographiques et méthodes de compression acceptées par l’AP (trame server Hello)
+- Cipher accepté par l’AP (trame server Hello)
 
   ![1558461213141](./Images/1558461213141.png)
 
@@ -87,14 +91,14 @@ Certificat serveur (Trame server Hello)
 
 ![1558462128904](./Images/1558462128904.png)
 
-- Change cipher spec (A compléter)
+- Change cipher spec
 
-  
+  ![1558526764111](./Images/1558526764111.png)
 
 #### Authentification interne et transmission de la clé WPA (échange chiffré, vu comme « Application data »)
 
 ![1558462265780](./Images/1558462265780.png)
 
-#### 4-way hadshake
+#### 4-way handshake
 
 ![1558460779129](./Images/1558460779129.png)
