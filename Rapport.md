@@ -102,3 +102,11 @@ Certificat serveur (Trame server Hello)
 #### 4-way handshake
 
 ![1558460779129](./Images/1558460779129.png)
+
+### Partie 2
+
+
+
+##### Source
+
+<https://warroom.rsmus.com/evil-twin-attack-using-hostapd-wpe/>
