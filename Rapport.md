@@ -105,7 +105,38 @@ Certificat serveur (Trame server Hello)
 
 ### Partie 2
 
+##### Modification du fichier hostapd-wpe.conf
 
+Le fichier hostpad-wpe.conf à été mis à jour afin qu'un AP nommée WinternetIsComing soit créé.
+
+![1558793685583](./Images/1558793685583.png)
+
+De plus, il a été nécessaire d'adapter le nom de l'interface
+
+![1558796949124](./Images/1558796949124.png)
+
+##### Lancement de hostpad-wpe
+
+Après la mise à jour du fichier hostapd-wpe.conf on a pu lancer lancer l'AP avec la commande `sudo hostapd-wpe hostapd-wpe.conf`. Après un temps d'attente l'utilisateur "Elie" à tenté de se connecter à l'AP
+
+![SWI_1](./Images/SWI_1.PNG)
+
+On a pu récupéré son challenge et sa response pour récupérer son mot de passe avec l'outil asleap et avons trouvé son mot de passe qui est "hello"
+
+![SWI_2](./Images/SWI_2.PNG)
+
+Il est aussi possible d'utiliser john de ripper pour effectuer cette étape. Pour cela, il faut mettre le "jrt NETNLM" récupéré avec hostapd-wpe dans un fichier texte et de lancer la commande suivante `john --format=netntlm fichier_texte.txt` 
+
+#### Méthode d'autentification géré par hostapd-wpe
+
+Les méthode d'authentification ci-dessous sont géré par hostpad-wpe:
+
+1. EAP-FAST/MSCHAPv2 (Phase 0)
+2. PEAP/MSCHAPv2
+3. EAP-TTLS/MSCHAPv2
+4. EAP-TTLS/MSCHAP
+5. EAP-TTLS/CHAP
+6. EAP-TTLS/PAP
 
 ##### Source
 
