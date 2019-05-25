@@ -25,7 +25,7 @@
 
 ### Partie 1
 
-Dans cette première partie on va passer en revue les trames reçu lors d'une authentification EAP-TLS.
+Dans cette première partie on va passer en revue les trames reçu lors d'une authentification EAP-PEAP.
 
 Voici l'ensemble des trames:
 
@@ -57,7 +57,7 @@ La trame de réponse contient l'identité du suppliant :
 
 - Version TLS
 
-On retrouve dans la trame Cient Hello le numéro de version du protocol TLS
+On retrouve dans la trame Client Hello le numéro de version du protocol TLS
 
 ![1558460603177](./Images/1558460603177.png)
 
@@ -91,7 +91,7 @@ Certificat serveur (Trame server Hello)
 
 ![1558462128904](./Images/1558462128904.png)
 
-- Change cipher spec
+- Change cipher spec (trame en provenance du client)
 
   ![1558526764111](./Images/1558526764111.png)
 
@@ -102,6 +102,18 @@ Certificat serveur (Trame server Hello)
 #### 4-way handshake
 
 ![1558460779129](./Images/1558460779129.png)
+
+#### Questions
+
+**_Question:_** Lors de l’échange de certificats entre le serveur d’authentification et le client :
+
+- Le serveur envoie-t-il un certificat au client ? Pourquoi oui ou non ?
+
+**_Réponse:_** Oui le serveur envoie un certificat au client
+
+- b.	Le client envoie-t-il un certificat au serveur ? Pourquoi oui ou non ?
+
+**Réponse:** Non, car le protocole TLS-PEAP ne demande pas au supplicant d'envoyer une certificat contrairement à l'EAP-TLS. 
 
 ### Partie 2
 
