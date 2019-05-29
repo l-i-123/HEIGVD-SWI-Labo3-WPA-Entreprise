@@ -109,11 +109,11 @@ Certificat serveur (Trame server Hello)
 
 - Le serveur envoie-t-il un certificat au client ? Pourquoi oui ou non ?
 
-**_Réponse:_** Oui le serveur envoie un certificat au client
+**_Réponse:_** Oui le serveur envoie un certificat au client, car il utilise le protocole PEAP
 
 - b.	Le client envoie-t-il un certificat au serveur ? Pourquoi oui ou non ?
 
-**Réponse:** Non, car le protocole TLS-PEAP ne demande pas au supplicant d'envoyer une certificat contrairement à l'EAP-TLS. 
+**Réponse:** Non, car le protocole PEAP ne demande pas au supplicant d'envoyer une certificat contrairement au protocole TLS. 
 
 ### Partie 2
 
